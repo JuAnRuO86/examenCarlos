@@ -11,7 +11,155 @@
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.9);
   }
-  
+
+
+
+
+
+  body::before{
+    content: '';
+    position: absolute;
+    top:-5px;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#e91e63,#e91e63 50%, #ffc107 50%, #ffc107) ;
+    animation: animate 5s ease-in-out infinite;
+
+  }
+
+  body::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes animate{
+    0%,100%{
+      transform: translateY(5px);
+    }
+    50%{
+      transform: translateY(-5px);
+    }
+  }
+  .container{
+    position:absolute;
+  }
+  .container::before{
+    content:'';
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+    height: 60px;
+    background: radial-gradient(rgba(0,0,0,0.2),transparent,transparent);
+    border-radius: 50%;
+  }
+  .box{
+    display: flex;
+    position: absolute;
+    bottom: 200px;
+    left: 100px;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    backdrop-filter: blur(25px);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.5);
+    animation: animate 5s ease-in-out infinite;
+    animation-delay: -2.5s;
+  }
+  .clock{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(transparent,rgba(255,255,255,0.2)),url(https://e7.pngegg.com/pngimages/813/410/png-clipart-social-media-marketing-time-management-clock-clock-without-hands-angle-content-marketing.png);
+    background-size: cover;
+    border-radius: 50%;
+    backdrop-filter: blur(25px);
+    border-bottom: none;
+    border-right: none;
+    box-shadow: -10px -10px 20px rgba(255,255,255,0.1), 10px 10px 20px rgba(0,0,0,0.1), 10px 10px 20px rgba(0,0,0,0.2);
+
+  }
+  .clock::before{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(6, 6, 6);
+    border-radius: 50%;
+    z-index: 10000;
+  }
+  .hour,.min,.sec{
+    position: absolute;
+  }
+  .hour, .hr{
+    width: 16px;
+    height: 16px;
+  }
+  .min, .hr{
+    width: 19px;
+    height: 19px;
+  }
+  .sec, .sc{
+    width: 23px;
+    height: 23px;
+  }
+  .hr, .min, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .hr::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 25px;
+    background: #1fecff;
+    z-index: 11;
+    border-radius: 6px;
+  }
+  .mn::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    background: rgb(0, 0, 0);
+    z-index: 12;
+    border-radius: 6px;
+  }
+  .sc::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: rgb(77, 76, 76);
+    z-index: 12;
+    border-radius: 6px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .principal {
     display: flex;
     width: 100%;
