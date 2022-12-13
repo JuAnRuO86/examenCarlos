@@ -9,15 +9,15 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-  
+    background-color: rgba(0, 0, 0, 0.9);
   }
   
   .principal {
     display: flex;
     width: 100%;
     position: relative;
-    overflow: hidden;
-  
+    justify-content: center;
+    align-items: center;
   }
   
   img {
@@ -26,9 +26,8 @@
     background-size: cover;
   }
   
-  #saludos {
-    /*Que se vea la imagen que esta debajo*/
-    background-color: rgba(0, 0, 0, 0.8);
+  #felicidades {
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5vw;
   
     /*Hago que se superponga*/
@@ -37,17 +36,22 @@
     width: auto;
     height: auto;
     text-align: center;
-    margin-top: 50vh;
   
     /*Que la letra se vea bien*/
-    color: gold;
+    color: white;
     font-size: 2em;
     font-style: italic;
-    text-shadow: 0px 2px goldenrod;
+    text-shadow: 0px 2px black;
     visibility: hidden;
   }
   
-  
+  #nombre {
+    animation-name: dos;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
   @media(orientation:landscape) {
     .principal {
       width: 40vw;
