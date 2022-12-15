@@ -1,6 +1,6 @@
 var musica = document.getElementById("musica");
-musica.play();
-
+var fondoNavideño = document.getElementById("fondoNavideño");
+var fondoNavideño2 = document.getElementById("fondoNavideño2");
 
 //MOSTRAR SALUDO CUANDO PASAN 5sg DEL INICIO DE LA PÁGINA
 const myTimeout = setTimeout(mostrarSaludo, 3000);
@@ -10,7 +10,7 @@ function mostrarSaludo() {
   document.getElementById("nombre").style.visibility="visible";
 }
 
-
+  
 
 //OCULTAR SALUDO AL HACER CLICK EN EL BODY
 let body = document.querySelector("body");
@@ -19,30 +19,10 @@ body.addEventListener("click", ocultarSaludo);
 function ocultarSaludo() {
     document.getElementById("felicidades").style.visibility="hidden";
     document.getElementById("nombre").style.visibility="hidden";
-
+    fondoNavideño.style.display="none";
+    fondoNavideño2.style.display="block";
+    musica.play();
   }
-
-  const deg=6;
-  const hr = document.querySelector('#hr');
-  const mn = document.querySelector('#mn');
-  const sc = document.querySelector('#sc');
-
-  setInterval(() => {
-    let day = new Date();
-    let hh = day.getHours() = 30;
-    let mm = day.getMinutes() = deg;
-    let ss = day.getSeconds() = deg;
-
-    hr.style.transform = `rotatez(${hh+(mm/12)}deg)`;
-    mn.style.transform = `rotatez(${(mm)}deg)`;
-    sc.style.transform = `rotatez(${(ss)}deg)`;
-
-  })
-
-
-
-
-
 
 
   window.addEventListener("orientationchange", ()=> {
@@ -59,7 +39,26 @@ function ocultarSaludo() {
 
 
 
+  /------------------------ NIEVE --------------------------/
 
+  const crearNieve = () => {
+
+    let nieve = document.createElement("i");
+
+    let x = innerWidth * Math.random();
+
+    let tamaño = Math.random() * 2;
+
+    nieve.style.left = x + '%';
+
+    nieve.style.width = tamaño + '%'
+    nieve.style.height = tamaño + '%'
+
+    copitos.appendChild(nieve);
+  };
+  
+  //para que se ejecute la funcion cada cierto tiempo se usa setinterval
+  setInterval(crearNieve, 20)
 
 
 
