@@ -1,3 +1,6 @@
+var musica = document.getElementById("musica");
+musica.play();//se reproduce la nueva musica
+
 //MOSTRAR SALUDO CUANDO PASAN 5sg DEL INICIO DE LA PÁGINA
 const myTimeout = setTimeout(mostrarSaludo, 3000);
 
@@ -34,3 +37,37 @@ function ocultarSaludo() {
     sc.style.transform = `rotatez(${(ss)}deg)`;
 
   })
+
+
+
+
+
+
+
+  window.addEventListener("orientationchange", ()=> {
+    if (window.screen.orientation.type == "portrait-primary") {
+      console.log("portrait");
+    }
+  
+    if (window.screen.orientation.type == "landscape-primary") {
+      console.log("landscape");
+  
+    }
+  
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
