@@ -19,6 +19,7 @@ body.addEventListener("click", ocultarSaludo);
 function ocultarSaludo() {
     document.getElementById("felicidades").style.visibility="hidden";
     document.getElementById("nombre").style.visibility="hidden";
+    document.getElementById("luisEnrique").style.transform = "scaleX(-1)";
     fondoNavideño.style.display="none";
     fondoNavideño2.style.display="block";
     musica.play();
@@ -59,8 +60,6 @@ function ocultarSaludo() {
   
   //para que se ejecute la funcion cada cierto tiempo se usa setinterval
   setInterval(crearNieve, 20)
-
-
 
 
 
