@@ -264,3 +264,16 @@ i{
   
   
   }
+
+
+#coche1,#coche2{
+  width: 20%;
+  height: 10%;
+  position: absolute;
+  margin-bottom: 150%;
+  margin-left: 50%;
+}
+#coche1{
+  margin-bottom: 150%;
+  margin-right: 100%;
+}
