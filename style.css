@@ -79,7 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(transparent,rgba(255,255,255,0.2)),url(https://e7.pngegg.com/pngimages/813/410/png-clipart-social-media-marketing-time-management-clock-clock-without-hands-angle-content-marketing.png);
+    background: radial-gradient(transparent,rgba(255,255,255,0.2)),url(clock.png);
     background-size: cover;
     border-radius: 50%;
     backdrop-filter: blur(25px);

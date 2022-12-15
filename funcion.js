@@ -1,5 +1,6 @@
 var musica = document.getElementById("musica");
-musica.play();//se reproduce la nueva musica
+musica.play();
+
 
 //MOSTRAR SALUDO CUANDO PASAN 5sg DEL INICIO DE LA PÁGINA
 const myTimeout = setTimeout(mostrarSaludo, 3000);
