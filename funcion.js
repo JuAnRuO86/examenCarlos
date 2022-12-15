@@ -1,37 +1,37 @@
 var musica = document.getElementById("musica");
 var fondoNavideño = document.getElementById("fondoNavideño");
 var fondoNavideño2 = document.getElementById("fondoNavideño2");
-var coche1 = document.getElementById("coche1");
-var coche2 = document.getElementById("coche2");
+var copa1 = document.getElementById("copa1");
+var copa2 = document.getElementById("copa2");
 
 //posiciones iniciales
-var x_coche1 = 0;
-var x_coche2 = 0;
+var y_copa1 = 0;
+var y_copa2 = 0;
 
 function correr() {
-    //movimiento coche1
-    if (x_coche1 <= 100 && x_coche1 >= 0) { //condición para que se mueva entre estos valores de la pantalla
-        x_coche1 = x_coche1 + 2; //movimiento del valor x
-        coche1.style.top = x_coche1 + "%"; //aplicar el valor obtenido al left del elemento
+    //movimiento copa1
+    if (y_copa1 <= 100 && y_copa1 >= 0) { //condición para que se mueva entre estos valores de la pantalla
+      y_copa1 = y_copa1 + 2; //movimiento del valor y
+        copa1.style.top = y_copa1 + "%"; //aplicar el valor obtenido al top de la copa
     }
     else { //si no cumple la condición, es decir, se sale de los valores de la pantalla, vuelve a empezar
-        x_coche1 = 0; //posicion inicial
-        coche1.style.top = x_coche1 + "%"; //volvemos a aplicar el valor obtenido al left del elemento
+        y_copa1 = 0; //posicion inicial
+        copa1.style.top = y_copa1 + "%"; //volvemos a aplicar el valor obtenido al top de la copa
     }
 
     //movimiento coche2
-    if (x_coche2 <= 100 && x_coche2 >= 0) { //condición para que se mueva entre estos valores de la pantalla
-        x_coche2 = x_coche2 + 1; //movimiento del valor x
-        coche2.style.top = x_coche2 + "%"; //aplicar el valor obtenido al left del elemento
+    if (y_copa2 <= 100 && y_copa2 >= 0) { //condición para que se mueva entre estos valores de la pantalla
+        y_copa2 = y_copa2 + 1; //movimiento del valor y
+        copa2.style.top = y_copa2 + "%"; //aplicar el valor obtenido al top de la copa
     }
     else { //si no cumple la condición, es decir, se sale de los valores de la pantalla, vuelve a empezar
-        x_coche2 = 0; //posicion inicial
-        coche2.style.top = x_coche2 + "%"; //volvemos a aplicar el valor obtenido al left del elemento
+        y_copa2 = 0; //posicion inicial
+        copa2.style.top = y_copa2 + "%"; //volvemos a aplicar el valor obtenido al top de la copa
     }
 
   }
 
-//MOSTRAR SALUDO CUANDO PASAN 5sg DEL INICIO DE LA PÁGINA
+//MOSTRAR SALUDO CUANDO PASAN 3sg DEL INICIO DE LA PÁGINA
 const myTimeout = setTimeout(mostrarSaludo, 3000);
 
 function mostrarSaludo() {
@@ -48,7 +48,7 @@ body.addEventListener("click", ocultarSaludo);
 function ocultarSaludo() {
     document.getElementById("felicidades").style.visibility="hidden";
     document.getElementById("nombre").style.visibility="hidden";
-    document.getElementById("luisEnrique").style.transform = "scaleX(-1)";
+    document.getElementById("messi").style.transform = "scaleX(-1)";
     fondoNavideño.style.display="none";
     fondoNavideño2.style.display="block";
     musica.play();
