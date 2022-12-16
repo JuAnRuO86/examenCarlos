@@ -274,7 +274,7 @@ i{
   margin-right: 100%;
 }
 
-
+/* Div que contiene al messi giratorio */
 .flip-box {
   position: absolute;
   background-color: transparent;
@@ -282,11 +282,11 @@ i{
   height: 12%;
   margin-top: 30%;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px; 
   z-index: 1;
 }
 
-/* This container is needed to position the front and back side */
+/* Este contenedor es necesario para posicionar el front y el back */
 .flip-box-inner {
   position: relative;
   width: 100%;
@@ -296,12 +296,12 @@ i{
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Hace un flip horizontal cuando pasas el ratón por encima de la foto */
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+/* Posición del front y back  */
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
@@ -310,13 +310,13 @@ i{
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
+/* Estilo de la parte de adelante de messi */
 .flip-box-front {
   background-color: #bbb;
   color: black;
 }
 
-/* Style the back side */
+/* Estilo de la parte de atrás de messi */
 .flip-box-back {
   background-color: dodgerblue;
   color: white;
