@@ -182,10 +182,8 @@ i{
 
 
 #messi{
-  position: absolute;
-  width: 20%;
-  height: 10%;
-  margin-top: 20%;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -209,14 +207,12 @@ i{
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5vw;
   
-    /*Hago que se superponga*/
     display: flex;
     position: absolute;
     width: auto;
     height: auto;
     text-align: center;
   
-    /*Que la letra se vea bien*/
     color: white;
     font-size: 2em;
     font-style: italic;
@@ -266,14 +262,63 @@ i{
   }
 
 
-#coche1,#coche2{
+#copa1,#copa2{
   width: 10%;
   height: 20%;
   position: absolute;
   margin-bottom: 150%;
   margin-left: 50%;
 }
-#coche1{
+#copa1{
   margin-bottom: 150%;
   margin-right: 100%;
+}
+
+
+.flip-box {
+  position: absolute;
+  background-color: transparent;
+  width: 20%;
+  height: 12%;
+  margin-top: 30%;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  z-index: 1;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }

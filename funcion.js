@@ -34,6 +34,7 @@ function correr() {
 //MOSTRAR SALUDO CUANDO PASAN 3sg DEL INICIO DE LA PÁGINA
 const myTimeout = setTimeout(mostrarSaludo, 3000);
 
+//Función que a los 3 segundos hará visible las felicitaciones y el nombre
 function mostrarSaludo() {
   document.getElementById("felicidades").style.visibility="visible";
   document.getElementById("nombre").style.visibility="visible";
@@ -45,12 +46,15 @@ function mostrarSaludo() {
 let body = document.querySelector("body");
 body.addEventListener("click", ocultarSaludo);
 
+//Función que ocultará las felicitaciones y el nombre junto con un cambio del fondo de navidad, la imagen de messi se girará y se ejecutará la
+//función de correr que hará que las copas caigan desde la parte superior de la pantalla
 function ocultarSaludo() {
     document.getElementById("felicidades").style.visibility="hidden";
     document.getElementById("nombre").style.visibility="hidden";
     document.getElementById("messi").style.transform = "scaleX(-1)";
     fondoNavideño.style.display="none";
     fondoNavideño2.style.display="block";
+    setInterval("correr()",60); //Se ejecutará la función correr
     musica.play();
   }
 
@@ -81,14 +85,14 @@ function ocultarSaludo() {
 
     nieve.style.left = x + '%';
 
-    nieve.style.width = tamaño + '%'
-    nieve.style.height = tamaño + '%'
+    nieve.style.width = tamaño + '%';
+    nieve.style.height = tamaño + '%';
 
     copitos.appendChild(nieve);
   };
   
   //para que se ejecute la funcion cada cierto tiempo se usa setinterval
-  setInterval(crearNieve, 20)
+  setInterval(crearNieve, 20);
 
 
 
