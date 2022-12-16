@@ -66,11 +66,16 @@ function ocultarSaludo() {
   window.addEventListener("orientationchange", ()=> {
     if (window.screen.orientation.type == "portrait-primary") {
       console.log("portrait");
+      document.getElementById("mundialFinal").style.marginTop="100%";
+      document.getElementById("flip-box").style.marginTop="40%";
+
     }
   
     if (window.screen.orientation.type == "landscape-primary") {
       console.log("landscape");
-  
+      document.getElementById("mundialFinal").style.marginTop="100%";
+      document.getElementById("flip-box").style.marginTop="50%";
+
     }
   
   });
