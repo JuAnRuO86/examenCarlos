@@ -44,8 +44,8 @@ function mostrarSaludo() {
 
 //OCULTAR SALUDO AL HACER CLICK EN EL BODY
 let body = document.querySelector("body");
+var rep=0;
 body.addEventListener("click", ocultarSaludo);
-
 //Función que ocultará las felicitaciones y el nombre junto con un cambio del fondo de navidad, la imagen de messi se girará y se ejecutará la
 //función de correr que hará que las copas caigan desde la parte superior de la pantalla
 function ocultarSaludo() {
@@ -54,7 +54,11 @@ function ocultarSaludo() {
     document.getElementById("messi").style.transform = "scaleX(-1)";
     fondoNavideño.style.display="none";
     fondoNavideño2.style.display="block";
-    setInterval("correr()",60); //Se ejecutará la función correr
+    //Este if sirve para que la función correr se ejecute solo una vez y no repita la funcio¡ón aumentando la velocidad de los elementos constantemente
+    if (rep == 0) {
+      setInterval("correr()",60); //Se ejecutará la función correr
+      rep=rep+1;
+    }
     musica.play();
   }
 
