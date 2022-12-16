@@ -68,13 +68,14 @@ function ocultarSaludo() {
       console.log("portrait");
       document.getElementById("mundialFinal").style.marginTop="100%";
       document.getElementById("flip-box").style.marginTop="40%";
-
+      document.getElementById("flip-box").style.fontSize="smaller";
     }
   
     if (window.screen.orientation.type == "landscape-primary") {
       console.log("landscape");
-      document.getElementById("mundialFinal").style.marginTop="100%";
+      document.getElementById("mundialFinal").style.marginTop="90%";
       document.getElementById("flip-box").style.marginTop="50%";
+      document.getElementById("flip-box").style.fontSize="medium";
 
     }
   
